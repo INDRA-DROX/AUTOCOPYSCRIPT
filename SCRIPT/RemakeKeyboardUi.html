@@ -1,0 +1,39 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DROX AUTO COPY</title>
+  <style>
+    body {
+      font-family: 'Consolas', 'Courier New', Courier, monospace;
+    }
+    .btn {
+      height: 10%;
+      width: 30%;
+    }
+  </style>
+</head>
+<body>
+  <h3 class="title">This Web Use Auto Copy If Broke Click Button</h3>
+  <button class="btn" id="btn">COPY SCRIPT</button>
+  <script>
+    let TextScript = `loadstring(game:HttpGet("https://raw.githubusercontent.com/INDRA-DROX/DroxRoblox/refs/heads/main/NormalScript/RemakeKeyboardUi"))()`;
+
+    function copyToClipboard() {
+      navigator.clipboard.writeText(textScript)
+        .then(() => {
+          console.log("autocopy in process");
+          alert("auto copy is succesfull");
+        })
+        .catch(err => {
+          console.error("autocopy is broke, using manual button : ", err);
+        });
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+      copyToClipboard();
+    });
+    document.getElementById('btn').addEventListener('click', () => copyToClipboard());
+  </script>
+</body>
+</html>
