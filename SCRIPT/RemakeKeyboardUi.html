@@ -14,7 +14,7 @@
   </style>
 </head>
 <body>
-  <h3 class="title">This Web Use Auto Copy If Broke Click Button</h3>
+  <h3 class="title"> Click Button to copy script</h3>
   <button class="btn" id="btn">COPY SCRIPT</button>
   <script>
     let TextScript = `loadstring(game:HttpGet("https://raw.githubusercontent.com/INDRA-DROX/DroxRoblox/refs/heads/main/NormalScript/RemakeKeyboardUi"))()`;
@@ -22,8 +22,8 @@
     function copyToClipboard() {
       navigator.clipboard.writeText(TextScript)
         .then(() => {
-          console.log("autocopy in process");
-          alert("auto copy is succesfull");
+          console.log("copy in process");
+          alert("copy is succesfull");
         })
         .catch(err => {
           console.error("autocopy is broke, using manual button : ", err);
